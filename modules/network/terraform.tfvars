@@ -1,5 +1,5 @@
 environment   = "dev"
-location      = "eastus2"
+location      = "eastus"
 address_space = "10.0.0.0/16"
 rg_name = "rg-network"
 subnet_count = 2
