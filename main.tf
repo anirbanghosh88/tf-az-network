@@ -1,4 +1,4 @@
-# Create a resource group
+# Create a resource group 
 resource "azurerm_resource_group" "this" {
   name     = "demo-rg01"
   location = "eastus"
