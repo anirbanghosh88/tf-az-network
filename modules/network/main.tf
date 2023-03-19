@@ -12,8 +12,11 @@ resource "azurerm_virtual_network" "this" {
 }
 resource "azurerm_subnet" "this" {
   count = var.subnet_count
-  name = "local.subnet_names-[count.index]"
+  name = "${local.subnet_names}-${count.index}"
   resource_group_name = local.rg_name
   virtual_network_name = local.vnet_name
   address_prefixes = [var.subnet_prefix[count.index]]
+  depends_on = [
+    azurerm_virtual_network.this
+  ]
 }
