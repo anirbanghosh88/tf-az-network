@@ -7,15 +7,12 @@ variable "location" {
 variable "rg_name" {
   type = string
 }
-variable "vmname" {
+variable "address_space" {
   type = string
 }
-variable "vmcount" {
-  type = string
+variable "subnet_count" {
+  type = number
 }
-variable "vmsize" {
-  type = string
-}
-variable "subnet_id" {
-  type = string
+variable "subnet_prefix" {
+  type = list(string)
 }

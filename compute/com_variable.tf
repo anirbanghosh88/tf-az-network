@@ -7,9 +7,6 @@ variable "location" {
 variable "rg_name" {
   type = string
 }
-variable "vmname" {
-  type = string
-}
 variable "vmcount" {
   type = string
 }
