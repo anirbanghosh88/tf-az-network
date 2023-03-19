@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "this" {
   location = "eastus"
 }
 module "vnet" {
-  source        = "./modules/network"
+  source        = "./network"
   environment   = "dev"
   location      = azurerm_resource_group.this.location
   address_space = "10.0.0.0/16"
